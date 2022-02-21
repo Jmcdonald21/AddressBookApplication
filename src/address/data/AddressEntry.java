@@ -2,14 +2,41 @@ package address.data;
 
 import java.util.Objects;
 
+/**
+ * Main class for AddressEntry includes constructors and data manipulation methods equals and hashCode
+ */
 public class AddressEntry {
+    /**
+     * Variable for First Name for individual AddressEntry
+     */
     private String firstName;
+    /**
+     * Variable for Last Name for individual AddressEntry
+     */
     private String lastName;
+    /**
+     * Variable for Street info for individual AddressEntry
+     */
     private String street;
+    /**
+     * Variable for City info for individual AddressEntry
+     */
     private String city;
+    /**
+     * Variable for State info for individual AddressEntry
+     */
     private String state;
+    /**
+     * Variable for Phone Number info for individual AddressEntry
+     */
     private String phone;
+    /**
+     * Variable for Email info for  individual AddressEntry
+     */
     private String email;
+    /**
+     * Variable for Zip Code info for individual AddressEntry
+     */
     private int zip;
 
     /**
@@ -27,7 +54,7 @@ public class AddressEntry {
     }
 
     /**
-     * AddressEntry creates a new AddressEntry that can be added into AddressBook
+     * Additional constructor that allows for inputs upon construction of an AddressEntry
      */
     public AddressEntry(String firstName, String lastName, String street, String city, String state, int zip, String phone, String email) {
 
@@ -171,6 +198,12 @@ public class AddressEntry {
         return email;
     }
 
+    /**
+     * Overloaded equals method works in tandem with overloaded hashCode method to ensure that the data structure only allows
+     * unique entries
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -186,6 +219,10 @@ public class AddressEntry {
         return Objects.equals(street, e.street) && Objects.equals(lastName, e.lastName) && Objects.equals(firstName, e.firstName);
     }
 
+    /**
+     * Overloaded hashcode method works in tandem with the overloaded equals method to ensure the data structure only allows unique entries
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(street, lastName, firstName);

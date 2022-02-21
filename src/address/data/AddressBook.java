@@ -5,14 +5,16 @@ import java.util.*;
 import java.util.Scanner;
 
 /**
- * AddressBook class holds a collection of objects of the class AddressEntry using an ArrayList
+ * AddressBook class holds a collection of objects of the class AddressEntry using a HashSet
+ * @author Joseph McDonald
  */
 public class AddressBook {
-
+    //create new HashSet known as AddressEntryList
     Set<AddressEntry> AddressEntryList = new HashSet<>();
 
     /**
-     * The list method Iterates through the AddressEntryList ArrayList and uses the toString() method from the AddressEntry class to print them out
+     * The list method first sorts then iterates through the AddressEntryList ArrayList
+     * and uses the toString() method from the AddressEntry class to print them
      */
     public void list() {
 

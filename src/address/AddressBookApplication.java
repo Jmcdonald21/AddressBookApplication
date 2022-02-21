@@ -1,27 +1,23 @@
 package address;
 
 import address.data.AddressBook;
-import address.data.AddressEntry;
 import java.util.Scanner;
 
-/** main AddressBookApplication: purpose is to invoke some methods of the Menu class
- **/
-
+/**
+ * Main class of the Address Book Application
+ * @author Joseph McDonald
+ */
 class AddressBookApplication {
 
     public static void main(String args[]) {
 
-        /**
-         * AddressBook ab creates a new instance of the AddressBook class called ab
-         */
+        //create new instance of AddressBook
         AddressBook ab = new AddressBook();
-        /**
-         * create instance of menu
-         */
+
+        //create instance of menu
         Menu Menu = new Menu();
-        /**
-         * create instance of scanner
-         */
+
+        //create instance of scanner
         Scanner keyboard = new Scanner(System.in);
 
         boolean noQuit = true;

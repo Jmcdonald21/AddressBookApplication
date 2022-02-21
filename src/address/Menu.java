@@ -1,9 +1,12 @@
 package address;
 
 import address.data.AddressEntry;
-
 import java.util.Scanner;
 
+/**
+ * Menu class creates all println prompts as well as most inputs for user I/O
+ * @author Joseph McDonald
+ */
 class Menu {
 
     Scanner keyboard = new Scanner(System.in);
@@ -88,6 +91,10 @@ class Menu {
         return "Email:";
     }
 
+    /**
+     * Method creates standard println output prompts and inputs for creating a new AddressEntry
+     * @return
+     */
     public AddressEntry promptNewAddressEntry() {
         System.out.println(promptFirstName());
         String fname = keyboard.nextLine();
