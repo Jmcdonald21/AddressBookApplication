@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Main class of the Address Book Application
  * @author Joseph McDonald
  */
-class AddressBookApplication {
+public class AddressBookApplication {
 
     public static void main(String args[]) {
 

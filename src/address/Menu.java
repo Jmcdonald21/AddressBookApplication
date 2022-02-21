@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Menu class creates all println prompts as well as most inputs for user I/O
  * @author Joseph McDonald
  */
-class Menu {
+public class Menu {
 
     Scanner keyboard = new Scanner(System.in);
 
