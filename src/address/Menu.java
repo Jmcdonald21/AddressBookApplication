@@ -1,14 +1,32 @@
 package address;
 
-/** address.Menu class currently only has static methods to prompt to standard output information about a Contact like name,etc
- **/
+import address.data.AddressEntry;
+
+import java.util.Scanner;
 
 class Menu {
+
+    Scanner keyboard = new Scanner(System.in);
+
+    /**
+     * Prints out the menu used for user input
+     */
+    void displayMenu() {
+        System.out.println("\n*********************\n"
+                           + "Please enter your menu selection\n"
+                           + "a) Loading From File\n"
+                           + "b) Addition\n"
+                           + "c) Removal\n"
+                           + "d) Find\n"
+                           + "e) Listing\n"
+                           + "f) Quit\n"
+                           + "*********************\n");
+    }
 
     /**
      * prompt_FirstName  generates a standard output prompt for the First Name to be entered
      */
-    public String prompt_FirstName() {
+    public String promptFirstName() {
 
         return "First Name:";
 
@@ -17,7 +35,7 @@ class Menu {
     /**
      * prompt_LastName  generates a standard output prompt for the Last Name to be entered
      */
-    public String prompt_LastName() {
+    public String promptLastName() {
 
         return "Last Name:";
     }
@@ -25,7 +43,7 @@ class Menu {
     /**
      * prompt_Street  generates a standard output prompt for the Street to be entered
      */
-    public String prompt_Street() {
+    public String promptStreet() {
 
         return "Street:";
     }
@@ -33,7 +51,7 @@ class Menu {
     /**
      * prompt_City  generates a standard output prompt for the City to be entered
      */
-    public String prompt_City() {
+    public String promptCity() {
 
         return "City:";
     }
@@ -41,7 +59,7 @@ class Menu {
     /**
      * prompt_State  generates a standard output prompt for the State to be entered
      */
-    public String prompt_State() {
+    public String promptState() {
 
         return "State:";
     }
@@ -49,7 +67,7 @@ class Menu {
     /**
      * prompt_Zip  generates a standard output prompt for the Zip to be entered
      */
-    public String prompt_Zip() {
+    public String promptZip() {
 
         return "Zip:";
     }
@@ -57,7 +75,7 @@ class Menu {
     /**
      * prompt_Telephone  generates a standard output prompt for the Telephone to be entered
      */
-    public String prompt_Telephone() {
+    public String promptTelephone() {
 
         return "Telephone:";
     }
@@ -65,9 +83,32 @@ class Menu {
     /**
      * prompt_Email  generates a standard output prompt for the Email to be entered
      */
-    public String prompt_Email() {
+    public String promptEmail() {
 
         return "Email:";
+    }
+
+    public AddressEntry promptNewAddressEntry() {
+        System.out.println(promptFirstName());
+        String fname = keyboard.nextLine();
+        System.out.println(promptLastName());
+        String lname = keyboard.nextLine();
+        System.out.println(promptStreet());
+        String street = keyboard.nextLine();
+        System.out.println( promptCity());
+        String city = keyboard.nextLine();
+        System.out.println(promptState());
+        String state = keyboard.nextLine();
+        System.out.println(promptZip());
+        String zip = keyboard.nextLine();
+        System.out.println(promptEmail());
+        String email = keyboard.nextLine();
+        System.out.println(promptTelephone());
+        String phone = keyboard.nextLine();
+
+        AddressEntry singleEntry = new AddressEntry(fname, lname, street, city, state, Integer.parseInt(zip), email, phone);
+
+        return singleEntry;
     }
 
 }
