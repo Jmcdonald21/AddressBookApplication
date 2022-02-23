@@ -22,7 +22,7 @@ public class AddressBook {
         list.sort(Comparator.comparing(AddressEntry::getLastName, String.CASE_INSENSITIVE_ORDER));
         int count = 1;
 
-        for (AddressEntry addressEntry : AddressEntryList) {
+        for (AddressEntry addressEntry : list) {
             System.out.println(count + ": " + addressEntry);
             count++;
         }
